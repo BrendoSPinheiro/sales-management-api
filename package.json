@@ -8,7 +8,9 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --inspect --ignore-watch node_modules --no-notify src/server.ts"
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --inspect --ignore-watch node_modules --no-notify src/server.ts",
+    "lint": "eslint . --ext .ts",
+    "lint-fix": "eslint . --ext .ts --fix"
   },
   "devDependencies": {
     "@types/node": "^17.0.41",
