@@ -2,7 +2,7 @@
   "name": "sales-management-api",
   "version": "1.0.0",
   "description": "api for sales management",
-  "main": "index.js",
+  "main": "src/shared/http/server.js",
   "repository": "git@github.com:BrendoSPinheiro/sales-management-api.git",
   "author": "Brendo Souza Pinheiro <brendo.spinheiro@gmail.com>",
   "license": "MIT",
