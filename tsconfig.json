@@ -6,12 +6,18 @@
     "emitDecoratorMetadata": true,
     "module": "commonjs",
     "rootDir": "src",
+    "baseUrl": ".",
     "resolveJsonModule": true,
     "allowJs": true,
     "outDir": "build",
     "esModuleInterop": true,
     "strict": true,
     "noImplicitAny": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "@config/*": ["./src/config/*"],
+      "@modules/*": ["./src/modules/*"],
+      "@shared/*": ["./src/shared/*"]
+    }
   }
 }
