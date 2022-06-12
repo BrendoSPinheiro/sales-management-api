@@ -4,6 +4,7 @@
     "lib": ["es6"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,
     "module": "commonjs",
     "rootDir": "src",
     "baseUrl": ".",
