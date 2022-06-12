@@ -10,7 +10,12 @@
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --inspect --ignore-watch node_modules --no-notify src/shared/http/server.ts",
     "lint": "eslint . --ext .ts",
-    "lint-fix": "eslint . --ext .ts --fix"
+    "lint-fix": "eslint . --ext .ts --fix",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
+    "mr": "typeorm migration:run",
+    "md": "typeorm migration:revert",
+    "mc": "typeorm migration:create -n",
+    "schema:drop": "typeorm schema:drop"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
