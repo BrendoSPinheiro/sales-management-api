@@ -11,11 +11,11 @@
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --inspect --ignore-watch node_modules --no-notify src/shared/http/server.ts",
     "lint": "eslint . --ext .ts",
     "lint-fix": "eslint . --ext .ts --fix",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
-    "mr": "typeorm migration:run",
-    "md": "typeorm migration:revert",
+    "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
+    "mr": "npm run typeorm migration:run",
+    "md": "npm run typeorm migration:revert",
     "mc": "typeorm migration:create -n",
-    "schema:drop": "typeorm schema:drop"
+    "schema:drop": "npm run typeorm schema:drop"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
