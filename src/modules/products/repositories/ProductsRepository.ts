@@ -4,6 +4,12 @@ import { ICreateProductDto } from '../dtos/CreateProductDto';
 
 @EntityRepository(Product)
 export class ProductRepository extends Repository<Product> {
+  public async findAll(): Promise<Product[]> {
+    const products = this.find();
+
+    return products;
+  }
+
   public async findByName(name: string): Promise<Product | undefined> {
     const product = this.findOne({
       where: {
