@@ -33,4 +33,10 @@ export class ProductRepository extends Repository<Product> {
 
     return product;
   }
+
+  public async updateProduct(updatedProduct: Product): Promise<Product> {
+    const product = await this.save(updatedProduct);
+
+    return product;
+  }
 }
