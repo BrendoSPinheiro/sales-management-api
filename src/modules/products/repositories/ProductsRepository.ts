@@ -39,4 +39,8 @@ export class ProductRepository extends Repository<Product> {
 
     return product;
   }
+
+  public async deleteProduct(id: string): Promise<void> {
+    await this.delete(id);
+  }
 }
