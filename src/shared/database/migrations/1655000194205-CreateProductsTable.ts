@@ -5,7 +5,7 @@ export class CreateProductsTable1655000194205 implements MigrationInterface {
     await queryRunner.query(`
       CREATE TABLE products (
         id UUID NOT NULL UNIQUE DEFAULT uuid_generate_v4(),
-        name VARCHAR(255) NOT NULL,
+        name VARCHAR(255) NOT NULL UNIQUE,
         price DECIMAL(10, 2) NOT NULL,
         quantity INTEGER NOT NULL,
         created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
