@@ -10,6 +10,12 @@ export class ProductRepository extends Repository<Product> {
     return products;
   }
 
+  public async findById(id: string): Promise<Product | undefined> {
+    const product = this.findOne(id);
+
+    return product;
+  }
+
   public async findByName(name: string): Promise<Product | undefined> {
     const product = this.findOne({
       where: {
