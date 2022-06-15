@@ -1,5 +1,11 @@
+import { createConnection } from 'typeorm';
 import { app } from './app';
 
-app.listen(3001, () => {
-  console.log('🔥 Server started at http://localhost:3001');
+createConnection().then(() => {
+  import('./routes').then(({ routes }) => {
+    app.use(routes);
+    app.listen(3001, () => {
+      console.log('🔥 Server started at http://localhost:3001');
+    });
+  });
 });
