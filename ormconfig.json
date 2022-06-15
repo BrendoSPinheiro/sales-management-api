@@ -6,6 +6,7 @@
   "password": "root",
   "database": "salesapi",
   "migrations": ["./src/shared/database/migrations/*.ts"],
+  "entities": ["./src/modules/**/entities/*.ts"],
   "cli": {
     "migrationsDir": "./src/shared/database/migrations"
   }
