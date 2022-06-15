@@ -1,13 +1,8 @@
-import { getCustomRepository } from 'typeorm';
 import { NotFoundException } from '@shared/errors';
 import { ProductRepository } from '../repositories/ProductsRepository';
 
 export class DeleteProductService {
-  private readonly productRepository: ProductRepository;
-
-  constructor() {
-    this.productRepository = getCustomRepository(ProductRepository);
-  }
+  constructor(private readonly productRepository: ProductRepository) {}
 
   public async execute(id: string): Promise<void> {
     const productExists = this.productRepository.findById(id);

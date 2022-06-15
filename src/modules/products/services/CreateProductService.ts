@@ -1,15 +1,10 @@
-import { getCustomRepository } from 'typeorm';
 import { Product } from '../entities/Product';
 import { BadRequestException } from '@shared/errors';
 import { ICreateProductDto } from '../dtos/CreateProductDto';
 import { ProductRepository } from '../repositories/ProductsRepository';
 
 export class CreateProductService {
-  private readonly productRepository: ProductRepository;
-
-  constructor() {
-    this.productRepository = getCustomRepository(ProductRepository);
-  }
+  constructor(private readonly productRepository: ProductRepository) {}
 
   public async execute({
     name,

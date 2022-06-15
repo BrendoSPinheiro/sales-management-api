@@ -6,19 +6,13 @@ import { UpdateProductService } from '../services/UpdateProductService';
 import { DeleteProductService } from '../services/DeleteProductService';
 
 export class ProductsController {
-  private readonly listProductService: ListProductService;
-  private readonly showProductService: ShowProductService;
-  private readonly createProductService: CreateProductService;
-  private readonly updateProductService: UpdateProductService;
-  private readonly deleteProductService: DeleteProductService;
-
-  constructor() {
-    this.listProductService = new ListProductService();
-    this.showProductService = new ShowProductService();
-    this.createProductService = new CreateProductService();
-    this.updateProductService = new UpdateProductService();
-    this.deleteProductService = new DeleteProductService();
-  }
+  constructor(
+    private readonly listProductService: ListProductService,
+    private readonly showProductService: ShowProductService,
+    private readonly createProductService: CreateProductService,
+    private readonly updateProductService: UpdateProductService,
+    private readonly deleteProductService: DeleteProductService,
+  ) {}
 
   public async index(request: Request, response: Response): Promise<Response> {
     const products = await this.listProductService.execute();
