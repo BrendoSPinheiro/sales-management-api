@@ -1,5 +1,5 @@
 import { NotFoundException } from '@shared/errors';
-import { ProductRepository } from '../repositories/ProductsRepository';
+import { ProductRepository } from '../repositories/ProductRepository';
 
 export class DeleteProductService {
   constructor(private readonly productRepository: ProductRepository) {}

@@ -1,6 +1,6 @@
 import { Product } from '../entities/Product';
 import { IUpdateProductDto } from '../dtos/UpdateProductDto';
-import { ProductRepository } from '../repositories/ProductsRepository';
+import { ProductRepository } from '../repositories/ProductRepository';
 import { BadRequestException, NotFoundException } from '@shared/errors';
 
 export class UpdateProductService {

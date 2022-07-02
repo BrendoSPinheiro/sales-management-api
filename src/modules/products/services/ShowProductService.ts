@@ -1,6 +1,6 @@
 import { Product } from '../entities/Product';
 import { NotFoundException } from '@shared/errors';
-import { ProductRepository } from '../repositories/ProductsRepository';
+import { ProductRepository } from '../repositories/ProductRepository';
 
 export class ShowProductService {
   constructor(private readonly productRepository: ProductRepository) {}

@@ -4,10 +4,10 @@ import { ShowProductService } from '../services/ShowProductService';
 import { CreateProductService } from '../services/CreateProductService';
 import { UpdateProductService } from '../services/UpdateProductService';
 import { DeleteProductService } from '../services/DeleteProductService';
-import { ProductsController } from '../controllers/ProductsController';
-import { ProductRepository } from '../repositories/ProductsRepository';
+import { ProductController } from '../controllers/ProductController';
+import { ProductRepository } from '../repositories/ProductRepository';
 
-export const productsFactory = (): ProductsController => {
+export const productFactory = (): ProductController => {
   const productRepository = getCustomRepository(ProductRepository);
   const listProductService = new ListProductService(productRepository);
   const showProductService = new ShowProductService(productRepository);
@@ -15,7 +15,7 @@ export const productsFactory = (): ProductsController => {
   const updateProductService = new UpdateProductService(productRepository);
   const deleteProductService = new DeleteProductService(productRepository);
 
-  const productsController = new ProductsController(
+  const productController = new ProductController(
     listProductService,
     showProductService,
     createProductService,
@@ -23,5 +23,5 @@ export const productsFactory = (): ProductsController => {
     deleteProductService,
   );
 
-  return productsController;
+  return productController;
 };

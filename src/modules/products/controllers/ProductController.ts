@@ -5,7 +5,7 @@ import { CreateProductService } from '../services/CreateProductService';
 import { UpdateProductService } from '../services/UpdateProductService';
 import { DeleteProductService } from '../services/DeleteProductService';
 
-export class ProductsController {
+export class ProductController {
   constructor(
     private readonly listProductService: ListProductService,
     private readonly showProductService: ShowProductService,

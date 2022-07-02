@@ -1,7 +1,7 @@
 import { Product } from '../entities/Product';
 import { BadRequestException } from '@shared/errors';
 import { ICreateProductDto } from '../dtos/CreateProductDto';
-import { ProductRepository } from '../repositories/ProductsRepository';
+import { ProductRepository } from '../repositories/ProductRepository';
 
 export class CreateProductService {
   constructor(private readonly productRepository: ProductRepository) {}
